@@ -1,0 +1,187 @@
+// page 1 responsive settings
+
+@media only screen and (min-width: 45em) {
+  .p1-hero-logo {
+    width: 8em;
+    margin-bottom: 2em;
+  }
+
+  .language-wrap {
+    font-size: 1em;
+    margin-top: 1.5em;
+  }
+
+  .p1-section1 {
+    background-position: center;
+
+    h1 {
+      margin: 0 !important;
+      @include h1Basic(white, 2.2em);
+    }
+  }
+
+  .p1-section2 {
+    height: 37em;
+
+    h1 {
+      @include h1Basic(white, 2.2em);
+    }
+  }
+
+  .p1-section3 {
+    h1 {
+      @include h1Basic(black, 2.2em);
+    }
+  }
+
+  .p1-section4 {
+    background-size: cover;
+
+    h1 {
+      @include h1Basic(white, 2.2em);
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+
+    p {
+      font-size: 1.4em;
+    }
+  }
+}
+
+@media only screen and (min-width: 65em) {
+  .p1-hero-logo {
+    width: 10em;
+    margin-top: 2em;
+  }
+
+  .p1-section1 {
+    background-image: none;
+    height: 30em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    div {
+      height: 30em;
+      width: 30vw;
+      position: relative;
+      margin-top: -1em;
+      transition: all ease-in-out 0.3s;
+      @include boxShadow(#11111a9c);
+    }
+
+    a {
+      height: 30em;
+      margin-top: -1em;
+    }
+
+    div:hover {
+      transform: scale(1.03);
+    }
+
+    h1 {
+      width: 80%;
+      z-index: 100;
+    }
+
+    .about {
+      background-image: url(./images/section1-1.jpeg);
+      background-size: cover;
+    }
+
+    .about:after {
+      @include backgroundImgCover;
+    }
+
+    .mission {
+      background-image: url(./images/section1-2.jpeg);
+      background-size: cover;
+      background-position: right center;
+    }
+
+    .mission:after {
+      @include backgroundImgCover($red-transparent);
+    }
+
+    .issues {
+      background-image: url(./images/section1-3.jpeg);
+      background-size: cover;
+    }
+
+    .issues:after {
+      @include backgroundImgCover($brown-transparent);
+    }
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .p1-header-content-wrap {
+    top: 10%;
+    transform: translateX(-50%);
+  }
+
+  .p1-hero-logo {
+    width: 15em;
+  }
+
+  .language-wrap {
+    font-size: 1em;
+    margin: 1em auto;
+  }
+
+  .p1-section1 {
+    height: 40em;
+
+    div {
+      height: 40em;
+      margin-top: -1.5em;
+    }
+  }
+
+  .p1-section3-img-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    margin: 3em auto;
+  }
+
+  .p1-section4 {
+    .p1-section4-content-wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    h1,
+    h3 {
+      flex: 1 0 100%;
+    }
+  }
+
+  .p1-section4-content {
+    flex: 0 0 45%;
+    margin-right: 3em;
+  }
+}
+
+@media only screen and (min-width: 95em) {
+  .language-wrap {
+    font-size: 1.2em;
+    margin-top: 2em;
+  }
+
+  .p1-header-content-wrap {
+    top: 20%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 110em) {
+  .p1-section1 {
+    height: 45em;
+    div {
+      height: 45em;
+      margin-top: -8em;
+    }
+  }
+}

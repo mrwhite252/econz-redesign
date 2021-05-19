@@ -1,0 +1,23 @@
+.number-box {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 2em;
+  height: 2em;
+  flex: 0 0 25%;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  text-align: center;
+  line-height: 2em;
+  color: white;
+  margin-right: 1em;
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 45em) {
+  .number-box {
+    height: 2.5em;
+    line-height: 2.5em;
+    font-size: 2.5em;
+  }
+}

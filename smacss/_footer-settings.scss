@@ -1,0 +1,76 @@
+footer {
+  position: relative;
+  padding: 2em 1em 1em 2em;
+  background: $dark-green;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  p {
+    font-size: 0.8em;
+    margin-bottom: 1em;
+  }
+}
+
+.subscription-line {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1em;
+
+  .contacts {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    .contacts-left {
+      margin-right: 2em;
+    }
+  }
+
+  .form-line-wrap {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    p {
+      margin-bottom: 0;
+      margin-right: 2em;
+    }
+  }
+
+  .form-lines {
+    border: 1px solid $light-green;
+    border-radius: 2px;
+    display: flex;
+
+    label {
+      display: block;
+      color: white;
+      background: $brown;
+      font-size: 0.8em;
+      padding: 0.1em 0.5em;
+    }
+  }
+  .form-lines:focus-within {
+    font-weight: 800;
+    border: none;
+  }
+
+  .form-lines input[type="text"]:focus {
+    border: thin solid $brown;
+    outline: none;
+  }
+  .form-lines input[type="text"] {
+    background: $dark-green;
+    border: none;
+    padding-left: 0.5em;
+  }
+}
+
+// @media only screen and (min-width: 80em) {
+//   footer {
+//     align-items: center;
+//   }
+// }

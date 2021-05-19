@@ -1,0 +1,48 @@
+// page 4  basic settings
+
+.key-issue-content-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2em;
+
+  h1 {
+    flex: 1 0 100%;
+    @include h1Basic(black, 1.5em);
+  }
+}
+
+.key-issue-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  grid-gap: 1em;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+  // page 4 setting
+
+  .key-issue-content-wrap {
+    h1 {
+      @include h1Basic(black, 2em);
+    }
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  // page 4 setting
+
+  .key-issue-content-wrap {
+    h1 {
+      @include h1Basic(black, 3em);
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.join-us-container {
+  font-family: "teko", sans-serif;
+  position: relative;
+  margin: 0.5em auto;
+  width: 3em;
+  height: 3em;
+  padding-top: 1em;
+  border-radius: 50%;
+  background: $brown;
+  color: white;
+  text-align: center;
+  transition: all ease-in-out 0.3s;
+}
+
+.join-us-container:hover {
+  transform: scale(1.2);
+}
+
+.join-us-container:before,
+.join-us-container:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.join-us-container:before {
+  animation: ripple 2s linear infinite;
+}
+.join-us-container:after {
+  animation: ripple 2s linear 1s infinite;
+}
+
+.join-us-container:hover:before,
+.join-us-container:hover:after {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+.section4-btn {
+  position: absolute;
+  background: $brown;
+  color: white;
+  padding: 0.1em 0.5em;
+  margin-top: 0.2em;
+  border-radius: 2px;
+  font-family: "Teko", sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.p5-form-btn {
+  background: $brown;
+  color: white;
+  padding: 0.2em 0;
+  margin: 1em 0;
+  border-radius: 2px;
+  font-family: "Teko", sans-serif;
+  font-size: 1.2em;
+  width: 5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 45em) {
+  .join-us-container {
+    width: 3em;
+    height: 3em;
+    font-size: 1.5em;
+    margin: 0.1em auto;
+    padding-top: 1em;
+  }
+
+  .section4-btn {
+    font-size: 1.4em;
+    margin-top: 0.1em;
+  }
+}
+
+@media only screen and (min-width: 65em) {
+  .join-us-container {
+    width: 4em;
+    height: 4em;
+    font-size: 2em;
+    margin: 0.2em auto;
+    padding-top: 1.5em;
+  }
+}

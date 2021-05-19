@@ -1,0 +1,100 @@
+.p5-section1 {
+  position: relative;
+  background-color: $light-green;
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2em;
+
+  .p1-section4-content-wrap {
+    position: relative;
+    z-index: 10;
+  }
+
+  h1 {
+    @include h1Basic(white);
+  }
+
+  h3 {
+    font-weight: 700;
+    color: white;
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 0.9em;
+    line-height: 144%;
+    color: white;
+    margin: 0 !important;
+  }
+}
+
+.p1-section4:after {
+  @include backgroundImgCover();
+}
+
+.p1-section4-content {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0 3em 0;
+}
+
+@import "number-box";
+
+.p1-section4-inner-content-wrap {
+  position: relative;
+}
+
+.social-meida-wrap {
+  display: flex;
+
+  object {
+    height: 2em;
+    width: 2em;
+    margin-right: 2em;
+    margin-top: 0.2em;
+    @include boxShadow(#11111a9c);
+  }
+}
+
+.section4-btn {
+  @include boxShadow(#11111a9c);
+}
+
+@media only screen and (min-width: 45em) {
+  .p5-section1 {
+    background-size: cover;
+
+    h1 {
+      @include h1Basic(white, 2.2em);
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+
+    p {
+      font-size: 1.4em;
+    }
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .p5-section1 {
+    .p1-section4-content-wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    h1,
+    h3 {
+      flex: 1 0 100%;
+    }
+  }
+
+  .p1-section4-content {
+    flex: 0 0 45%;
+    margin-right: 3em;
+  }
+}

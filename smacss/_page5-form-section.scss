@@ -1,0 +1,158 @@
+.p5-form {
+  background-color: $light-green;
+  padding: 1em 2em;
+
+  h3 {
+    font-weight: 700;
+    color: white;
+    font-size: 1.3em;
+    padding: 1em 0;
+  }
+
+  label,
+  p {
+    font-size: 0.9em;
+    color: white;
+    line-height: 200%;
+    margin-left: 0;
+  }
+
+  .p5-form-btn {
+    @include boxShadow(#11111a9c);
+  }
+}
+
+.form-part1 {
+  .form-line {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0;
+  }
+
+  input,
+  textarea {
+    background-color: $light-green;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+  }
+
+  input {
+    height: 2em;
+  }
+
+  input:focus,
+  textarea:focus {
+    border: 1px solid $dark-green;
+    outline: none;
+  }
+}
+
+.form-part2 {
+  .form-line-part2 {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 0.5em 0;
+    }
+  }
+
+  label {
+    position: relative;
+    padding-left: 2em;
+  }
+  //   hide the defult radio button
+  input {
+    position: absolute;
+    top: 0.4em;
+    left: 0;
+    opacity: 0;
+  }
+
+  // create a custom radio button
+
+  .checkmark {
+    position: absolute;
+    top: 0.4em;
+    left: 0;
+    height: 0.8em;
+    width: 0.8em;
+    background: $dark-green;
+    border-radius: 50%;
+  }
+
+  label:hover input ~ .checkmark {
+    background: $dark-green-transparent;
+  }
+
+  label > input:checked ~ .checkmark {
+    background: $brown;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+  .p5-form {
+    label,
+    p {
+      font-size: 1.4em;
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .for-desktop-view {
+    display: flex;
+    justify-content: space-between;
+
+    .form-line {
+      flex: 0 0 45%;
+    }
+  }
+
+  .form-part2 {
+    display: flex;
+    justify-content: space-between;
+
+    .form-line-part2 {
+      flex: 0 0 45%;
+    }
+
+    .checkmark {
+      top: 0.5em;
+      height: 0.9em;
+      width: 0.9em;
+    }
+  }
+}
+
+@media only screen and (min-width: 85em) {
+  .p5-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h3 {
+      flex: 1 0 100%;
+    }
+
+    form {
+      flex: 0 0 47.5%;
+      padding-right: 4em;
+      border-right: 1px solid $dark-green-transparent;
+    }
+
+    .form-part2 {
+      flex: 1 0 47.5%;
+      margin-left: 4em;
+
+      .form-line-part2 {
+        flex: 0 0 60%;
+      }
+    }
+  }
+}

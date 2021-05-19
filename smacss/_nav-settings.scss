@@ -1,0 +1,255 @@
+header {
+  position: relative;
+  width: 100%;
+}
+
+.fixed-nav,
+.scroll-nav {
+  display: flex;
+  padding: 0.5em 2em;
+  position: relative;
+  width: 100%;
+  vertical-align: top;
+  background: white;
+  @include boxShadow();
+
+  .logo {
+    width: 2em;
+  }
+
+  #banner-img {
+    display: none;
+  }
+  .banner-mobile {
+    font-family: "helvetica", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    text-align: left;
+    color: $dark-green;
+    margin-left: 1.5em;
+  }
+
+  .nav-content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 17em;
+    background: $light-green;
+    z-index: 100;
+    opacity: 1;
+    text-align: center;
+    padding: 1.5em 0 !important;
+    clip-path: circle(20px at 100% -10%);
+    -webkit-clip-path: circle(20px at 100% -10%);
+    @include boxShadow();
+
+    a {
+      width: 70%;
+      margin: 0 auto;
+      transition: all ease-in-out 0.2s;
+    }
+    h1 {
+      @include h1Basic(white, 2em);
+      margin: 0 auto;
+    }
+
+    .current-page {
+      color: $brown;
+    }
+
+    a:hover {
+      background: $brown-transparent;
+      border-radius: 4px;
+    }
+  }
+}
+
+.fixed-nav {
+  .nav-bar-1 {
+    z-index: 10001;
+  }
+}
+
+.scroll-nav {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  opacity: 1;
+  transition: all ease-in-out 0.5s;
+}
+
+.scroll-nav.hide {
+  opacity: 0;
+}
+
+.nav-bar-1,
+.nav-bar-2 {
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  display: block;
+  width: 3em;
+  padding-left: 1em;
+  z-index: 150;
+  .first-line,
+  .second-line,
+  .third-line {
+    background-color: $dark-green;
+    height: 0.3em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+// nav - responsive settings
+
+@media screen and (min-width: 48em) {
+  .fixed-nav,
+  .scroll-nav {
+    .nav-container {
+      margin-left: 1.5em;
+      width: 100%;
+    }
+
+    .nav-content-container {
+      height: auto;
+      clip-path: none !important;
+      position: relative;
+      background-color: inherit;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0 !important;
+      box-shadow: none;
+
+      a {
+        margin: 0 0.1em;
+      }
+
+      a:nth-child(1) {
+        width: 30%;
+      }
+
+      h1 {
+        @include h1Basic($dark-green, 1.3em);
+        margin: 0 auto;
+      }
+
+      .current-page {
+        color: $brown;
+      }
+
+      a:hover {
+        background: white;
+      }
+
+      h1:after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 0.2em;
+        background-color: $dark-green;
+        z-index: 100;
+        transition: all ease 0.2s;
+      }
+
+      h1:hover:after {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    .nav-bar-1,
+    .nav-bar-2 {
+      display: none;
+    }
+  }
+
+  .fixed-nav {
+    .logo {
+      width: 3em;
+    }
+    #banner-img {
+      display: block;
+      width: 100%;
+    }
+
+    .banner-mobile {
+      display: none;
+    }
+  }
+
+  .scroll-nav {
+    align-items: center;
+
+    .logo {
+      width: 2em;
+    }
+    #banner-img,
+    .banner-mobile {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 65em) {
+  .fixed-nav,
+  .scroll-nav {
+    .nav-content-container {
+      margin: 0;
+      justify-content: space-around;
+    }
+  }
+
+  .fixed-nav {
+    .logo {
+      width: 3em;
+    }
+  }
+
+  .scroll-nav {
+    align-items: center;
+    .logo {
+      width: 2em;
+    }
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .fixed-nav {
+    #banner-img {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .logo {
+      width: 5em;
+    }
+  }
+  .fixed-nav,
+  .scroll-nav {
+    .nav-content-container {
+      h1 {
+        @include h1Basic($dark-green, 2em);
+        margin: 0.3em 0;
+      }
+    }
+  }
+
+  .scroll-nav {
+    .logo {
+      width: 3em;
+    }
+  }
+}
+
+@media only screen and (min-width: 100em) {
+  .fixed-nav {
+    .logo {
+      width: 6em;
+    }
+  }
+}

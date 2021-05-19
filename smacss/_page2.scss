@@ -1,0 +1,49 @@
+// p2 specific settings
+
+.about-us-icon-section {
+  @include gridSettings();
+  margin: 3em auto;
+
+  img {
+    width: 80%;
+    margin: 0 auto;
+    object-fit: cover;
+    transition: all ease-in-out 0.3s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+}
+.about-us-content {
+  p {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  // page 2 settings
+
+  .about-us-icon-section {
+    grid-template-columns: repeat(auto-fill, minmax(17em, 1fr));
+    margin: 3em auto;
+
+    img {
+      width: 80%;
+      margin: 0 auto;
+      object-fit: cover;
+      transition: all ease-in-out 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .about-us-content {
+    p {
+      font-size: 1.2em !important;
+      margin: 1em;
+    }
+  }
+}

@@ -1,0 +1,214 @@
+.p1-header-content-wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.p1-hero-logo {
+  width: 5em;
+  margin: 0.2em auto;
+}
+
+.language-wrap {
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  padding: 0;
+
+  h2 {
+    padding: 0 0.2em;
+  }
+
+  h2:nth-child(2) {
+    font-weight: 400;
+  }
+  h2:nth-child(3) {
+    font-weight: 400;
+    letter-spacing: 0.2em;
+  }
+}
+
+.p1-section1 {
+  background-image: url(./images/section1-1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 45em;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    height: 15em;
+    width: 100%;
+    position: relative;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include h1Basic(white);
+    margin: 0;
+  }
+
+  .about {
+    background: $dark-green-transparent;
+  }
+
+  .mission {
+    background: $red-transparent;
+  }
+
+  .issues {
+    background: $brown-transparent;
+  }
+}
+
+.p1-section2 {
+  position: relative;
+  height: 36.5em;
+  background-image: url(./images/section2-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 1em 0;
+
+  .p1-section2-content-wrap {
+    position: relative;
+    z-index: 5;
+
+    h1 {
+      @include h1Basic(white);
+    }
+  }
+}
+
+.p1-section2:after {
+  @include backgroundImgCover();
+}
+
+.img-scroll {
+  display: flex;
+  overflow-x: auto;
+  justify-content: space-between;
+
+  img {
+    width: 25em;
+    margin: 1.5em;
+    object-fit: cover;
+    @include boxShadow(#11111a4d);
+  }
+}
+
+.img-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.img-scroll::-webkit-scrollbar-thumb {
+  background: $dark-green-transparent;
+}
+
+.p1-section3 {
+  padding: 1em 0;
+
+  h1 {
+    @include h1Basic(black);
+  }
+}
+
+.p1-section3-img-wrap {
+  @include gridSettings(2em);
+  margin: 3em auto;
+
+  img {
+    width: 90%;
+    margin: 0 auto;
+    transition: all ease-in-out 0.3s;
+  }
+
+  #penguin {
+    width: 50%;
+  }
+
+  #nz {
+    width: 60%;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+}
+
+.p1-section4 {
+  position: relative;
+  background-image: url(./images/new-zealand-continent.jpeg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2em;
+
+  .p1-section4-content-wrap {
+    position: relative;
+    z-index: 10;
+  }
+
+  h1 {
+    @include h1Basic(white);
+  }
+
+  h3 {
+    font-weight: 700;
+    color: white;
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 0.9em;
+    line-height: 144%;
+    color: white;
+    margin: 0 !important;
+  }
+}
+
+.p1-section4:after {
+  @include backgroundImgCover();
+}
+
+.p1-section4-content {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0 3em 0;
+}
+
+@import "number-box";
+
+.p1-section4-inner-content-wrap {
+  position: relative;
+}
+
+.social-meida-wrap {
+  display: flex;
+
+  object {
+    height: 2em;
+    width: 2em;
+    margin-right: 2em;
+    margin-top: 0.2em;
+    @include boxShadow(#11111a9c);
+  }
+}
+
+.section4-btn {
+  @include boxShadow(#11111a9c);
+}
