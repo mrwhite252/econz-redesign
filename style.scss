@@ -1,0 +1,71 @@
+@mixin boxShadow($color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: 1.95px 1.95px 2.6px $color;
+}
+
+@mixin h1Basic($color, $font-size: 2em) {
+  color: $color;
+  font-size: $font-size;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1em auto;
+}
+
+@mixin backgroundImgCover($background: $dark-green-transparent) {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  background: $background;
+}
+
+@mixin gridSettings($grid-gap: 1em) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
+  grid-gap: $grid-gap;
+  align-items: center;
+  width: 100%;
+  padding: 1em 2em;
+}
+
+@mixin Paragraphs($font-size: 0.8em) {
+  font-size: $font-size;
+  line-height: 200%;
+}
+
+@import "./smacss/universal-settings";
+
+@import "./smacss/color-scheme";
+
+@import "./smacss/transition-animation";
+
+@import "./smacss/iframe";
+
+@import "./smacss/btn-settings";
+
+@import "./smacss/page1";
+
+@import "./smacss/page1-responsive-settings";
+
+@import "./smacss/nav-settings";
+
+@import "./smacss/footer-settings";
+
+@import "./smacss/content-page-frame";
+
+@import "./smacss/page2";
+
+@import "./smacss/page3";
+
+@import "./smacss/page4-img-cover";
+
+@import "./smacss/page4-basic-settings";
+
+@import "./smacss/page5-section1";
+
+@import "./smacss/page5-section2";
+
+@import "./smacss/page5-form-section";
